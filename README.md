@@ -1,5 +1,10 @@
 # segunda-entrega-frontend
+## Project setup
+Instalar NodeJS
 
+npm install
+```
+npm install
 ## Project setup
 ```
 npm install
