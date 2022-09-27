@@ -66,9 +66,9 @@
   export default {
     name: 'Home',
     data: () => ({
-    password: "",
-    verPassword: false,
-  }),
+      password: "",
+      verPassword: false,
+    }),
 
   }
 </script>
