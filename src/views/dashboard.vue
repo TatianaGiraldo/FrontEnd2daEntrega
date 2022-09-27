@@ -1,8 +1,8 @@
 <template>
     <v-card>
       <v-toolbar
-        color="cyan"
-        dark
+      color="#e1bee7"
+      dark
         flat
       >  
         <template v-slot:extension>
@@ -10,14 +10,22 @@
             v-model="tab"
             align-with-title
           >
-            <v-tabs-slider color="yellow"></v-tabs-slider>
+            <v-tabs-slider color="#883997"></v-tabs-slider>
   
             <v-tab
               v-for="item in items"
               :key="item"
             >
-              {{ item }}
+            <p class="colortati">{{ item }}</p>  
             </v-tab>
+          <v-tab
+          to="/page">
+          <p class="colortati">Página de ejemplo</p>  
+          </v-tab>
+          <v-tab
+          to="/videos">
+          <p class="colortati">Videos</p>  
+          </v-tab>
           </v-tabs>
         </template>
       </v-toolbar>
@@ -29,8 +37,8 @@
         >
           <v-card flat>
             <v-card-text>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem possimus unde harum accusamus modi quis perspiciatis laborum itaque eius, illo recusandae, obcaecati libero, quam quisquam fugit autem aut sit repellat.
-            <v-img src="https://via.placeholder.com/300"></v-img>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis repellendus dicta cupiditate ipsam adipisci aliquid recusandae voluptatibus suscipit omnis! Possimus nulla ullam iure, reprehenderit in eum dolores rerum. Eos, dolore?</p>
+            <v-row justify="center"> <v-col cols="3"> <v-img src="https://via.placeholder.com/300"></v-img> </v-col> </v-row>
             </v-card-text>
           </v-card>
         </v-tab-item>

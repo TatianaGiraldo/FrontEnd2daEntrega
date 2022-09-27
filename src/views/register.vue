@@ -4,23 +4,43 @@
     lazy-validation
     class="pa-6"
   >
-  <h1 class="mb-4 text-center colortati">BIENVENIDO</h1>
+  <h1 class="mb-4 text-center colortati">Crear usuario</h1>
     <v-text-field
       outlined
       dense 
       :counter="10"
-      label="Nombre"
+      label="Nombre de usuario"
       required
     ></v-text-field>
+
+    <v-select
+     :items="items"
+     outlined
+     dense 
+     label="Tipo de usuario"
+    ></v-select>
 
     <v-text-field
       outlined
       dense 
       v-model="password"
-      label="Contraseña"
+      label="Ingrese contraseña"
       required
       :type="!verPassword?'password':'text'"
     ></v-text-field>
+
+    <v-text-field
+      outlined
+      dense 
+      v-model="passwordconfirm"
+      label="Repita la contraseña"
+      required
+      :type="!verPassword?'password':'text'"
+    ></v-text-field>
+
+    <p class="red--text"
+    v-if="password!==passwordconfirm"
+    >Las contraseñas no coinciden</p>
 
     <v-checkbox
       v-model="verPassword"
@@ -29,32 +49,14 @@
     ></v-checkbox>
 
     <div
-    class="d-flex justify-space-between">
-    <v-btn
-      color="#ab47bc"
-      dark
-      class="mr-4"
-    >
-      Recuperar contraseña
-    </v-btn>
-
-    <v-btn
-      color="#ab47bc"
-      dark
-      to="/register"
-    >
-      Registrarse
-    </v-btn>
-    </div>
-    <div
     class="d-flex flex-row-reverse">
     <v-btn
       to="/dashboard"
-      color= "#883997"
       dark
+      color="#883997"
       class="mt-4"
     >
-      INGRESE
+      CREAR
     </v-btn>
     </div>
 
@@ -64,10 +66,14 @@
 <script>
 
   export default {
-    name: 'Home',
+    name: 'createuser',
     data: () => ({
     password: "",
     verPassword: false,
+    passwordconfirm: "",
+    items: [
+            'Cliente', 'Administrador', 'Super admin',
+          ],
   }),
 
   }

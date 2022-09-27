@@ -2,6 +2,9 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import dashboard from '../views/dashboard.vue'
+import register from '../views/register.vue'
+import page from '../views/page.vue'
+import videos from '../views/videos.vue'
 
 Vue.use(VueRouter)
 
@@ -12,9 +15,24 @@ const routes = [
     component: HomeView
   },
   {
+    path: '/videos',
+    name: 'videos',
+    component: videos
+  },
+  {
     path: '/dashboard',
     name: 'inicio',
     component: dashboard
+  },
+  {
+    path: '/page',
+    name: 'page',
+    component: page
+  },
+  {
+    path: '/register',
+    name: 'Registro',
+    component: register
   },
   {
     path: '/about',

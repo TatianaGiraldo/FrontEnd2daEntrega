@@ -13,11 +13,11 @@ export default new Vuetify({
       light: {
         primary: '#007BFF',
         secondary: '#424242',
-        accent: '#82B1FF',
-        error: '#FF5252',
+        accent: '#883997',
+        error: '#E53935',
         info: '#2196F3',
-        success: '#4CAF50',
-        warning: '#FFC107'
+        success: '#26A69A',
+        warning: '#FFB74D'
       },
     },
   },
